@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MakeMagic</name>
+    </assembly>
+    <members>
+        <member name="T:MakeMagic.Controllers.CharacterController">
+            <summary>
+            Controller character
+            </summary>
+        </member>
+        <member name="M:MakeMagic.Controllers.CharacterController.Create(MakeMagic.Data.DTOs.CharacterDto)">
+            <summary>
+            Create a new character using body from request
+            </summary>
+            <param name="characterDto">DTO character</param>
+            <returns></returns>
+        </member>
+        <member name="M:MakeMagic.Controllers.CharacterController.SelectAll(MakeMagic.Models.Filters.CharacterFilter)">
+            <summary>
+            Return all characters, filter <see cref="T:MakeMagic.Models.Filters.CharacterFilter"/> is not required
+            </summary>
+            <param name="characterFilter">Use houseId to filter query</param>
+            <returns></returns>
+        </member>
+        <member name="M:MakeMagic.Controllers.CharacterController.SelectById(System.Int32)">
+            <summary>
+            Return one character filter by <see cref="P:MakeMagic.Models.Character.Id"/>
+            </summary>
+            <param name="id">Character <see cref="P:MakeMagic.Models.Character.Id"/></param>
+            <returns>Character</returns>
+        </member>
+        <member name="M:MakeMagic.Controllers.CharacterController.Update(System.Int32,MakeMagic.Data.DTOs.CharacterDto)">
+            <summary>
+            Update a character existing in database
+            </summary>
+            <param name="id"><see cref="P:MakeMagic.Models.Character.Id"/></param>
+            <param name="characterDTO">DTO character from body request</param>
+            <returns>statusCode: 204</returns>
+        </member>
+        <member name="M:MakeMagic.Controllers.CharacterController.Delete(System.Int32)">
+            <summary>
+            Delete character by <see cref="P:MakeMagic.Models.Character.Id"/>
+            </summary>
+            <param name="id"><see cref="P:MakeMagic.Models.Character.Id"/></param>
+            <returns>statusCode: 204</returns>
+        </member>
+        <member name="T:MakeMagic.Data.DTOs.CharacterDto">
+            <summary>
+            Classe represent Data Transfer Object
+            </summary>
+        </member>
+        <member name="T:MakeMagic.Models.House">
+            <summary>
+            This classe's using for mapping object from HTTPClient - potterApi/houses
+            </summary>
+        </member>
+        <member name="T:MakeMagic.Models.Houses">
+            <summary>
+            This classe's using for mapping list os houses from HTTPClient - potterApi/houses
+            </summary>
+        </member>
+        <member name="P:MakeMagic.Models.Houses.houses">
+            <summary>
+            List of houses from HTTPClient - potterApi/houses
+            </summary>
+        </member>
+        <member name="M:MakeMagic.Models.Houses.Exists(System.String)">
+            <summary>
+            Verify if <see cref="P:MakeMagic.Models.House.Id"/> from parameter exists in collection <see cref="P:MakeMagic.Models.Houses.houses"/>
+            </summary>
+            <param name="houseid"></param>
+            <returns>return true if exists</returns>
+        </member>
+    </members>
+</doc>
